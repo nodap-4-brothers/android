@@ -1,20 +1,16 @@
 package com.example.hackerton
 
 import android.os.Bundle
-import android.provider.ContactsContract.Profile
-import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.hackerton.databinding.ActivityNaviBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
-//private const val TAG_POST = "Post_activity"
-//private const val TAG_HOME = "home_fragment"
-//private const val TAG_PROFILE = "Profile_fragment"
+private const val TAG_POST = "Post_activity"
+private const val TAG_HOME = "home_fragment"
+private const val TAG_PROFILE = "Profile_fragment"
 
-class NaviActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class NaviActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityNaviBinding
 
@@ -25,24 +21,19 @@ class NaviActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         //setContentView(R.layout.activity_main)
 
 
-        //setFragment(TAG_HOME, HomeFragment())
+        setFragment(TAG_HOME, HomeFragment())
 
-        /*binding.navigationView.setOnItemSelectedListener { item ->
+        binding.navigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.PostFragment -> setFragment(TAG_POST, PostFragment())
                 R.id.homeFragment -> setFragment(TAG_HOME, HomeFragment())
                 R.id.ProfileFragment -> setFragment(TAG_PROFILE, ProfileFragment())
             }
             true
-        }*/
-
-        val bottomNavigationView = findViewById<View>(R.id.navigationView) as BottomNavigationView
-        bottomNavigationView.setOnItemSelectedListener(this)
-        supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, HomeFragment())
-            .commit()
+        }
     }
 
-    /*private fun setFragment(tag: String, fragment: Fragment) {
+    private fun setFragment(tag: String, fragment: Fragment) {
         val manager: FragmentManager = supportFragmentManager
         val fragTransaction = manager.beginTransaction()
 
@@ -81,26 +72,5 @@ class NaviActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
 
         fragTransaction.commitAllowingStateLoss()
-    }*/
-
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.homeFragment -> {
-                val home_fragment = HomeFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, home_fragment)
-                    .commit()
-            }
-            R.id.postFragment -> {
-                val post_fragment = PostFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, post_fragment)
-                    .commit()
-            }
-            R.id.profileFragment -> {
-                val profile_fragment = ProfileFragment()
-                supportFragmentManager.beginTransaction().replace(R.id.mainFrameLayout, profile_fragment)
-                    .commit()
-            }
-        }
-        return true
     }
 }
