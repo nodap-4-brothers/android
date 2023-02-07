@@ -4,13 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="186dp"
         android:layout_height="64dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
         android:text="회원가입"
+        android:textColor="@color/white"
         android:textSize="45sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,8 +28,9 @@
         android:layout_marginTop="50dp"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="Id"
+        android:hint="학교 아이디"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_title"
@@ -38,8 +43,9 @@
         android:layout_marginTop="40dp"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="Id"
+        android:hint="아이디"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/schoolId"
         app:layout_constraintStart_toStartOf="@id/schoolId"
         app:layout_constraintTop_toBottomOf="@id/schoolId"
@@ -53,9 +59,10 @@
         android:layout_marginTop="40dp"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="password"
+        android:hint="비밀번호"
         android:inputType="textPassword"
         android:text=""
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/schoolId"
         app:layout_constraintStart_toStartOf="@id/schoolId"
         app:layout_constraintTop_toBottomOf="@id/Id"
@@ -63,51 +70,42 @@
 
     <EditText
         android:id="@+id/password2"
-        android:layout_width="290dp"
-        android:layout_height="44dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:layout_weight="1"
         android:ems="8"
         android:hint="비밀번호 확인"
         android:inputType="textPassword"
         android:text=""
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="@id/schoolId"
         app:layout_constraintStart_toStartOf="@id/schoolId"
         app:layout_constraintTop_toBottomOf="@id/Password"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="291dp"
         android:layout_height="52dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="87dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="160dp"
+        android:layout_marginTop="25dp"
+        android:background="#595959"
         android:text="회원가입"
+        android:textColor="#499C54"
         android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password2"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/password2" />
 
-    <ImageButton
-        android:id="@+id/backbutton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="62dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="302dp"
-        android:layout_marginBottom="42dp"
-        app:layout_constraintBottom_toTopOf="@+id/schoolId"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.875"
-        app:srcCompat="?attr/actionModeCloseDrawable" />
+    <ImageView
+        android:id="@+id/eye"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:tag="0"
+        app:layout_constraintBottom_toBottomOf="@id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintTop_toTopOf="@id/Password"
+        tools:background="@drawable/hide" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
