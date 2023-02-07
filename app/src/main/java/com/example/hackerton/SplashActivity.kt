@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 
 
 class SplashActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.splash_background)
         val intent = Intent(this, LoginActivity::class.java)
-        val loginbtn = findViewById<Button>(R.id.splash)
+        val loginbtn = findViewById<ImageButton>(R.id.splash)
 
         loginbtn.setOnClickListener {
             startActivity(intent)
