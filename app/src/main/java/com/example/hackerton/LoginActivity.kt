@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        val intent2 = Intent(this, PostActivity::class.java)
+        val intent2 = Intent(this, NaviActivity::class.java)
         val intent = Intent(this, MainActivity2::class.java)
         val make = findViewById<Button>(R.id.Make)
 

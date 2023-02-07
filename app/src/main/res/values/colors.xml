@@ -10,8 +10,8 @@
     <color name="greens">#538053</color>
     <color name="black2">#505050</color>
     <color name="background">#FF3C3F41</color>
-    <color name="btn_false">#595959</color>
     <color name="btn_true">#499C54</color>
+    <color name="btn_false">#595959</color>
     <color name="yellow">#FAFA96</color>
     <color name="colorPrimary">#606060</color>
 </resources>

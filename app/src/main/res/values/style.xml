@@ -2,7 +2,7 @@
 <resources>
     <!-- For Splash Screen -->
     <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowBackground">@drawable/iic_logogroup</item>
     </style>
 </resources>
 

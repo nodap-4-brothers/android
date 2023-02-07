@@ -6,9 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.hackerton.databinding.ActivityNaviBinding
 
-private const val TAG_POST = "Post_fragment"
+private const val TAG_POST = "Post_activity"
 private const val TAG_HOME = "home_fragment"
-private const val TAG_PROFILE = "Profilefragment"
+private const val TAG_PROFILE = "Profile_fragment"
 
 class NaviActivity : AppCompatActivity() {
 
@@ -18,6 +18,7 @@ class NaviActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNaviBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        //setContentView(R.layout.activity_main)
 
 
         setFragment(TAG_HOME, HomeFragment())

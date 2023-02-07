@@ -1,0 +1,18 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context="SplashActivity"
+    tools:ignore="ExtraText">
+
+    <ImageButton
+        android:="@+id/splash"
+        android:layout_width="460dp"
+        android:layout_height="460dp"
+        android:background="@drawable/iic_logogroup"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="15dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
