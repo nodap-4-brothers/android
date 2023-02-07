@@ -10,6 +10,15 @@ class ActivityMainWindowMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mainmain)
+    }
+    class SplashActivity:AppCompatActivity(){
 
+        override fun onCreate(savedlnstanceState:Bundle?){
+            super.onCreate(savedlnstanceState)
+
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

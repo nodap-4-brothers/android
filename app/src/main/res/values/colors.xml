@@ -13,4 +13,5 @@
     <color name="btn_false">#595959</color>
     <color name="btn_true">#499C54</color>
     <color name="yellow">#FAFA96</color>
+    <color name="colorPrimary">#606060</color>
 </resources>
