@@ -8,14 +8,8 @@
 
     <ImageButton
         android:id="@+id/splash"
-        android:layout_width="360dp"
-        android:layout_height="460dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="255dp"
-
-
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@drawable/iic_logogroup"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
