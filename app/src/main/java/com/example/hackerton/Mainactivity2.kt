@@ -8,14 +8,12 @@ import android.text.InputType
 import android.text.TextWatcher
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.ToggleButton
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity2 : AppCompatActivity() {
 
-    private val PwToggle: ImageView by lazy {
+    private val pwToggle: ImageView by lazy {
         findViewById(R.id.eye)
     }
 
@@ -35,20 +33,20 @@ class MainActivity2 : AppCompatActivity() {
 
         login.isEnabled = false
 
-        PwToggle.setImageResource(R.drawable.hide)
+        pwToggle.setImageResource(R.drawable.hide)
         password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
         checkPw.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
 
-        PwToggle.setOnClickListener {
-            if(PwToggle.tag.equals("0")) {
-                PwToggle.tag = "1"
-                PwToggle.setImageResource(R.drawable.shape)
+        pwToggle.setOnClickListener {
+            if(pwToggle.tag.equals("0")) {
+                pwToggle.tag = "1"
+                pwToggle.setImageResource(R.drawable.shape)
 
                 password.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
                 checkPw.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-            } else if (PwToggle.tag.equals("1")) {
-                PwToggle.tag = "0"
-                PwToggle.setImageResource(R.drawable.hide)
+            } else if (pwToggle.tag.equals("1")) {
+                pwToggle.tag = "0"
+                pwToggle.setImageResource(R.drawable.hide)
 
                 password.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 checkPw.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD

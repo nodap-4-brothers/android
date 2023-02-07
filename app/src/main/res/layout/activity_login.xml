@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity2">
 
 
@@ -18,7 +19,8 @@
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Id"
+        android:hint="아이디"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/Password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,12 +36,23 @@
         android:layout_marginEnd="143dp"
         android:layout_marginBottom="53dp"
         android:text="로그인"
+        android:textColor="@color/white"
         android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/Id"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/iv_eye"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:tag="0"
+        app:layout_constraintBottom_toBottomOf="@id/Password"
+        app:layout_constraintEnd_toEndOf="@+id/Password"
+        app:layout_constraintTop_toTopOf="@id/Password"
+        tools:background="@drawable/hide" />
 
     <EditText
         android:id="@+id/Password"
@@ -51,7 +64,8 @@
         android:layout_marginBottom="369dp"
         android:layout_weight="1"
         android:ems="10"
-        android:hint="password"
+        android:hint="비밀번호"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +73,7 @@
         app:layout_constraintTop_toBottomOf="@+id/Id"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/loginBtn"
         android:layout_width="159dp"
         android:layout_height="69dp"
@@ -69,9 +83,9 @@
         android:layout_marginBottom="206dp"
         android:enabled="false"
         android:text="로그인"
+        android:background="@drawable/login_btn_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password" />
 
@@ -88,6 +102,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints,UnknownId" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
