@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import com.example.hackerton.databinding.FragmentPostBinding
 
 class PostFragment : Fragment() {
@@ -31,7 +32,7 @@ class PostFragment : Fragment() {
     }
 
     private fun settingTextCnt() {
-        binding.etTitle.addTextChangedListener(object: TextWatcher{
+        binding.etTitle.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
@@ -43,7 +44,8 @@ class PostFragment : Fragment() {
             override fun afterTextChanged(p0: Editable?) {
 
             }
-
         })
     }
+
+
 }

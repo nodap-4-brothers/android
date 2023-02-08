@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.hackerton.databinding.ActivityNaviBinding
 
-private const val TAG_POST = "Post_activity"
+private const val TAG_POST = "post_fragment"
 private const val TAG_HOME = "home_fragment"
 private const val TAG_PROFILE = "Profile_fragment"
 
@@ -25,9 +25,9 @@ class NaviActivity : AppCompatActivity() {
 
         binding.navigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.PostFragment -> setFragment(TAG_POST, PostFragment())
+                R.id.postFragment -> setFragment(TAG_POST, PostFragment())
                 R.id.homeFragment -> setFragment(TAG_HOME, HomeFragment())
-                R.id.ProfileFragment -> setFragment(TAG_PROFILE, ProfileFragment())
+                R.id.profileFragment -> setFragment(TAG_PROFILE, ProfileFragment())
             }
             true
         }
