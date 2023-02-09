@@ -1,5 +1,6 @@
 package com.example.hackerton
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
+import android.widget.Toast
 import com.example.hackerton.databinding.FragmentPostBinding
 
 class PostFragment : Fragment() {
@@ -29,6 +31,11 @@ class PostFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         settingTextCnt()
+        binding.Post.setOnClickListener {
+            Toast.makeText(requireContext(), "작성되었습니다", Toast.LENGTH_SHORT).show()
+            binding.etTitle.text.clear()
+            binding.writing.text.clear()
+        }
     }
 
     private fun settingTextCnt() {
