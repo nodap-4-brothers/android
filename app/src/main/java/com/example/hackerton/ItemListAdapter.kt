@@ -14,6 +14,7 @@ class ItemListAdapter(val context: Context) : RecyclerView.Adapter<ItemListAdapt
         fun bind(item: Item) {
             binding.tvTitle.text = item.title
             binding.tvProfile.text = item.name
+
         }
     }
 
